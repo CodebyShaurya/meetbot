@@ -9,7 +9,7 @@ const app = express();
 const server = http.createServer(app);
 
 const io = socketio(server);
-console.log(io)
+console.log(io);
 app.use(express.static(path.join(__dirname, 'public')));
 
 let rooms = {};

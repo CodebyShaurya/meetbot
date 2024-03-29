@@ -578,6 +578,10 @@ socket.on('remove peer', sid => {
 
 sendButton.addEventListener('click', () => {
     const msg = messageField.value;
+    if (msg.substring(0, 5) === '/ask ') {
+        console.log(msg.substring(5));
+        console.log('BOT CALLED');
+    }
     messageField.value = '';
     socket.emit('message', msg, username, roomid);
 })
